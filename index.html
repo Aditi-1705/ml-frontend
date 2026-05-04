@@ -78,7 +78,9 @@ function predict() {
     .then(res => res.json())
     .then(data => {
         document.getElementById("result").innerText =
-            "Prediction: " + data.result;
+            document.getElementById("result").innerText =
+    "Prediction: " + data.result +
+    " | Confidence: " + data.confidence + "%";
     });
 }
 </script>
